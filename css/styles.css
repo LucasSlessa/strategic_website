@@ -1,0 +1,827 @@
+:root {
+  --primary: #0292be;
+  --secondary: #ffffffd3;
+  --text-color: #fff;
+  --text-secondary: #000;
+  --text-tertiary: #5d5d5d;
+}
+
+* {
+  font-family: "Montserrat";
+  margin: 0;
+  padding: 0;
+}
+
+/* ////////header/////////// */
+
+.nav-header {
+  position: absolute;
+  top: 2%;
+  left: 8%;
+  right: 15%;
+  z-index: 1000; /* Ajuste conforme necessário */
+}
+
+
+
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.logo{
+  width: 140px;
+
+
+}
+
+nav ul li{
+  margin-top: 10%;
+  display: inline-block;
+  list-style: none;
+  margin: 10px 20px;
+  animation: slideInLeft 0.5s ;
+
+}
+
+nav ul li a{
+  color:#fff;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+}
+
+nav ul li a::after{
+  content: '';
+  width: 0;
+  height: 3px;
+  background: #1a5ae4;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.5s;
+
+}
+nav ul li a:hover::after{
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Event form */
+#event-subscription {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("../img/hrz-5.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 85vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: var(--text-color);
+  
+  
+}
+
+#disclaimer h2,
+#disclaimer .event-date {
+  color: var(--primary);
+}
+
+#disclaimer h2 {
+  font-size: 3em;
+  margin-bottom: 1em;
+}
+
+#disclaimer .about-event {
+  font-size: 2em;
+  text-transform: uppercase;
+  max-width: 350px;
+  font-weight: bold;
+  margin-bottom: 1em;
+  
+}
+
+#disclaimer p {
+  font-size: 1.2em;
+  margin-bottom: 0.3em;
+}
+
+#disclaimer .event-date {
+  font-weight: bold;
+}
+
+#subscription-form {
+  background-color: var(--secondary);
+  padding: 3em;
+  max-width: 22%;
+  border-radius: 3%;
+}
+
+#subscription-form p {
+  font-size: 1.5em;
+  color: var(--text-secondary);
+  margin-bottom: 1em;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.8em;
+}
+
+.form-group label {
+  color: var(--text-tertiary);
+  margin-bottom: 0.3em;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+  padding: 6px 8px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+.btn {
+  background-color: var(--primary);
+  color: var(--text-color);
+  text-transform: uppercase;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+/* Benefits section */
+#key-benefits h2 {
+  background-color: var(--secondary);
+  text-align: center;
+  padding: 2em;
+  font-weight: 500;
+}
+
+.benefits {
+  display: flex;
+  justify-content: space-around;
+  padding: 4em;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.benefit {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 20%;
+  color: var(--text-tertiary);
+}
+
+.benefit .benefit-img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 1em;
+}
+
+#benefit-1 {
+  background-image: url("../img/sqr-1.jpg");
+}
+
+#benefit-2 {
+  background-image: url("../img/sqr-2.jpg");
+}
+
+#benefit-3 {
+  background-image: url("../img/sqr-3.jpg");
+}
+
+/* Event location */
+#location {
+  height: 400px;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("../img/hrz-1.jpg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: var(--text-color);
+  margin-bottom: 3em;
+}
+
+#address,
+#about-location {
+  max-width: 30%;
+}
+
+#address {
+  display: flex;
+}
+
+#address i {
+  color: var(--primary);
+  font-size: 4em;
+  margin-right: 0.5em;
+}
+
+#address-details {
+  text-align: center;
+  font-size: 1.3em;
+}
+
+#about-location h3 {
+  color: var(--primary);
+  font-size: 2.5em;
+  margin-bottom: 1em;
+  text-transform: uppercase;
+}
+
+#about-location p {
+  line-height: 1.5em;
+}
+
+/* Event details container */
+#details {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.detail {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 5%;
+  margin-bottom: 4em;
+}
+
+.detail img {
+  width: 50%;
+}
+
+.detail h3 {
+  margin-bottom: 1em;
+  font-size: 2em;
+  font-weight: 500;
+}
+
+#detail-1 h3 {
+  font-size: 3em;
+  font-weight: 700;
+}
+
+.detail-description {
+  width: 100%;
+  padding-left: 2em;
+}
+
+#detail-3 .detail-description {
+  justify-self: flex-start;
+}
+
+.detail-description ul {
+  list-style-position: inside;
+}
+
+.detail-description ul li {
+  margin-bottom: 0.4em;
+}
+
+.detail-description ul li:last-child {
+  font-weight: bold;
+}
+
+/* Call to Action Section */
+#cta {
+  height: 300px;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("../img/hrz-6.jpg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: var(--text-color);
+}
+
+#cta h3 {
+  margin-bottom: 1.2em;
+  font-size: 2em;
+  font-weight: 500;
+}
+
+#cta .btn {
+  width: 30%;
+  margin: 0 auto;
+  font-weight: 600;
+  font-size: 1.2em;
+}
+
+/* Footer */
+#footer {
+  height: 200px;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("../img/hrz-1.jpg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: var(--text-color);
+}
+
+#footer h3 {
+  font-size: 1.8em;
+  margin-bottom: 0.5em;
+  color: #00baf2;
+}
+
+#footer p:nth-child(2) {
+  margin-bottom: 1em;
+  font-size: 1.2em;
+}
+
+#footer span {
+  font-weight: bold;
+}
+
+
+
+
+#recomendacao {
+  height: 600px;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("../img/hrz-1.jpg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: var(--text-color);
+  margin-bottom: 3em;
+}
+
+.video {
+  width: 45%;
+  margin: 0 auto;
+}
+
+.avaliacoes {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+}
+
+.avaliacao {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 1em;
+  margin-bottom: 1em;
+}
+
+.avaliacao h3 {
+  margin-top: 0;
+}
+
+.avaliacao p {
+  margin-bottom: 0.5em;
+}
+
+.avaliacao span {
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+/* ///////////////////video/////////////////////// */
+
+#about{
+  padding: 80px 50px;
+  color: #0a0000;
+  background-color: #ffffff;
+
+}
+.row{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+}
+.about-col-1{
+  flex-basis: 40%;
+
+
+}
+.about-col-1 video{
+  width: 100%;
+  border-radius: 15px;
+
+  margin-left: 15%;
+}
+.about-col-1 video:hover{
+  
+  transform: scale(1.1);
+  transition: 0.6s;
+}
+
+.about-col-2{
+  flex-basis: 50%;
+
+}
+.sub-title{
+  font-size: 60px;
+  font-weight: 600;
+  color: #000000;
+  padding-right: 10%;
+  margin-bottom: 6%;
+
+
+}
+.about-col-2    p{
+  margin-top: 2%;
+
+}
+.tab-links{
+  margin-right: 50px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+}
+
+
+.about-col-1 img{
+  width: 100%;
+  border-radius: 15px;
+
+  margin-left: 15%;
+}
+.about-col-1 img:hover{
+  
+  transform: scale(1.1);
+  transition: 0.6s;
+}
+
+
+
+/* //////////////////////////////////////////video//////////////////////////////////// */
+
+
+
+
+
+/* Mobile */
+@media (max-width: 450px) {
+  /* Event form */
+  #event-subscription {
+    flex-direction: column;
+    height: auto;
+  }
+
+  #disclaimer {
+    padding: 2em;
+  }
+
+  #disclaimer h2 {
+    margin-bottom: 0.5em;
+  }
+
+  #subscription-form {
+    max-width: 70%;
+    margin-bottom: 2em;
+  }
+
+  /* Benefits section */
+  .benefits {
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    padding: 2em;
+  }
+
+  .benefit {
+    max-width: 100%;
+    margin-bottom: 2em;
+  }
+
+  /* Event location */
+  #location {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+    padding: 2em 0;
+  }
+
+  #address {
+    order: 2;
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  #address i {
+    margin: 0.3em 0;
+  }
+
+  #about-location {
+    order: 1;
+    max-width: 100%;
+  }
+
+  #about-location h3 {
+    margin-bottom: 0;
+  }
+
+  #about-location p {
+    display: none;
+  }
+
+  /* Event details container */
+  .detail {
+    flex-direction: column;
+    margin-bottom: 0.5em;
+    gap: 0;
+  }
+
+  .detail img {
+    width: 100%;
+    margin: 2em 0;
+  }
+
+  #detail-1 img {
+    display: none;
+  }
+
+  .detail-description {
+    padding: 0;
+  }
+
+  #detail-3 img {
+    order: 2;
+  }
+
+  #detail-3 .detail-description {
+    order: 1;
+  }
+
+  /* Call to Action Section */
+  #cta .btn {
+    width: 80%;
+  }
+
+  
+
+
+
+  
+
+
+  .about-col-1{
+    flex-basis: 35%;
+  
+  
+  }
+  .about-col-1 video{
+    width: 100%;
+    border-radius: 15px;
+  
+    margin-left: 0%;
+  }
+
+.sub-title{
+    font-size: 40px;
+
+}
+.about-col-1, .about-col-2{
+    flex-basis: 100%;
+}
+.about-col-1{
+    margin-bottom: 30px;
+
+}
+.about-col-2{
+    font-size: 14px;
+}
+
+.tab-links{
+    font-size: 16px;
+    margin-right:20px ;
+
+}
+
+}
+
+
+
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --first-color: hsl(38, 92%, 58%);
+  --first-color-light: hsl(38, 100%, 78%);
+  --first-color-alt: hsl(32, 75%, 50%);
+  --second-color: hsl(195, 75%, 52%);
+  --dark-color: hsl(212, 40%, 12%);
+  --white-color: hsl(212, 4%, 95%);
+  --body-color: hsl(212, 42%, 15%);
+  --container-color: hsl(212, 42%, 20%);
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Bai Jamjuree", sans-serif;
+  --h2-font-size: 1.25rem;
+  --normal-font-size: 1rem;
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/*=============== CARD ===============*/
+.container2 {
+
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+  url("../img/hrz-5.jpg");
+  background-position: center;
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--white-color);
+}
+.container2 iframe{
+    width: 130%;
+    border-radius: 15px;
+  
+    margin-left: 5%;
+}
+
+.card__container {
+  padding-block: 8rem;
+}
+
+.card__content {
+  margin-inline: 1.75rem;
+  border-radius: 1.25rem;
+  overflow: hidden;
+}
+
+.card__article {
+  width: 400px; /* Remove after adding swiper js */
+  border-radius: 1.25rem;
+  overflow: hidden;
+  
+}
+
+.card__image {
+  position: relative;
+  background-color: rgba(240, 248, 255, 0);
+  padding-top: 1.5rem;
+  margin-bottom: -.75rem;
+  
+  
+}
+
+.card__data {
+  background-color: var(--container-color);
+  padding: 1.5rem 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  position: relative;
+  z-index: -100;
+  
+}
+
+.card__img {
+  width: 180px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 5;
+  border-radius: 50%;
+}
+
+
+.card__name {
+  font-size: var(--h2-font-size);
+  color: var(--second-color);
+  margin-bottom: .75rem;
+}
+
+.card__description {
+  font-weight: 500;
+  margin-bottom: 1.75rem;
+}
+
+.card__button {
+  display: inline-block;
+  background-color: var(--first-color);
+  padding: .75rem 1.5rem;
+  border-radius: .25rem;
+  color: var(--dark-color);
+  font-weight: 600;
+}
+
+
+
+
+.swiper-pagination-bullet {
+  background-color: hsl(212, 32%, 40%);
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--second-color);
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (max-width: 760px) {
+
+  .container2 iframe{
+    display: none;
+  }
+  .card__data {
+    padding: 1rem;
+  }
+}
+
+/* For medium devices */
+@media screen and (min-width: 768px) {
+  .card__content {
+    margin-inline: 3rem;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: block;
+  }
+
+  
+
+}
+
+/* For large devices */
+@media screen and (min-width: 1120px) {
+  .card__container {
+    max-width: 1120px;
+  }
+
+  .swiper-button-prev {
+    left: -1rem;
+  }
+  .swiper-button-next {
+    right: -1rem;
+  }
+
+ 
+}
