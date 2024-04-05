@@ -4,6 +4,7 @@
   --text-color: #fff;
   --text-secondary: #000;
   --text-tertiary: #5d5d5d;
+  scroll-behavior: smooth;
 }
 
 * {
@@ -104,6 +105,10 @@ nav ul li a:hover::after{
   margin-bottom: 1em;
 }
 
+#disclaimer h2 b{
+  color: #fff;
+}
+
 #disclaimer .about-event {
   font-size: 2em;
   text-transform: uppercase;
@@ -130,7 +135,7 @@ nav ul li a:hover::after{
 }
 
 #subscription-form p {
-  font-size: 1.5em;
+  font-size: 1.3em;
   color: var(--text-secondary);
   margin-bottom: 1em;
 }
@@ -170,51 +175,8 @@ nav ul li a:hover::after{
   opacity: 1;
 }
 
-/* Benefits section */
-#key-benefits h2 {
-  background-color: var(--secondary);
-  text-align: center;
-  padding: 2em;
-  font-weight: 500;
-}
 
-.benefits {
-  display: flex;
-  justify-content: space-around;
-  padding: 4em;
-  width: 80%;
-  margin: 0 auto;
-}
 
-.benefit {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 20%;
-  color: var(--text-tertiary);
-}
-
-.benefit .benefit-img {
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
-  background-size: cover;
-  background-position: center;
-  margin-bottom: 1em;
-}
-
-#benefit-1 {
-  background-image: url("../img/sqr-1.jpg");
-}
-
-#benefit-2 {
-  background-image: url("../img/sqr-2.jpg");
-}
-
-#benefit-3 {
-  background-image: url("../img/sqr-3.jpg");
-}
 
 /* Event location */
 #location {
@@ -261,10 +223,16 @@ nav ul li a:hover::after{
   line-height: 1.5em;
 }
 
+
+
+
+
+
+
 /* Event details container */
 #details {
   width: 80%;
-  margin: 0 auto;
+  margin: 5% auto;
 }
 
 .detail {
@@ -276,7 +244,7 @@ nav ul li a:hover::after{
 }
 
 .detail img {
-  width: 50%;
+  width: 45%;
 }
 
 .detail h3 {
@@ -311,9 +279,14 @@ nav ul li a:hover::after{
   font-weight: bold;
 }
 
+
+
+
+
+
 /* Call to Action Section */
 #cta {
-  height: 300px;
+  height: 650px;
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
     url("../img/hrz-6.jpg");
   background-position: center;
@@ -332,10 +305,16 @@ nav ul li a:hover::after{
 }
 
 #cta .btn {
-  width: 30%;
-  margin: 0 auto;
-  font-weight: 600;
-  font-size: 1.2em;
+  width: 50%;
+  margin: 1rem auto;
+  font-weight: 500;
+  font-size: 1rem;
+}
+#cta .btn:hover {
+  scale: 110%;
+  transition: 1.2s;
+  background-color: #1a5ae4;
+
 }
 
 /* Footer */
@@ -414,7 +393,63 @@ nav ul li a:hover::after{
 
 
 
+/* fooot */
 
+.footer{
+  background: #fff;
+  text-align: center;
+  
+}
+
+.footer .share {
+  padding: 2px;
+  
+}
+.footer .share a{
+  height: 1rem;
+  width: 1rem;
+  line-height: 5rem;
+  font-size: 2rem;
+  margin: 3rem;
+  border-radius: 50%;
+  color: #000000;
+}
+
+.footer .share a:hover {
+  scale:  1.2;
+  transition: 1s;
+
+}
+
+.footer .links{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 2rem 0;
+  gap: 1rem;
+}
+
+.footer .links a{
+  padding: .5rem 2rem;
+  color: #000000;
+  border: var(--border);
+  font-size: 1rem;
+}
+.footer .links a:hover{
+  transform: scale(1.1);
+  transition: 1s;
+}
+
+.footer .credit{
+  font-size: 1rem;
+  color: #000000;
+  font-weight: lighter;
+  padding: 1.5rem;
+}
+
+.footer .credit span{
+  color: black;
+}
 
 
 
@@ -596,6 +631,9 @@ nav ul li a:hover::after{
     width: 80%;
   }
 
+
+
+  
   
 
 
@@ -698,13 +736,22 @@ img {
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
   color: var(--white-color);
+ 
 }
 .container2 iframe{
-    width: 130%;
-    border-radius: 15px;
+    width: 100%;
   
-    margin-left: 5%;
+    margin-left: 0%;
 }
+.container2 .service-title{
+  color:#ffffff;
+  position: absolute;
+  margin-top: -600px;
+  text-align: center;
+  z-index:  99; 
+
+}
+
 
 .card__container {
   padding-block: 8rem;
@@ -787,9 +834,7 @@ img {
 /* For small devices */
 @media screen and (max-width: 760px) {
 
-  .container2 iframe{
-    display: none;
-  }
+ 
   .card__data {
     padding: 1rem;
   }
