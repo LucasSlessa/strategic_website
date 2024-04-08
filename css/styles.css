@@ -535,6 +535,14 @@ nav ul li a:hover::after{
 
 /* Mobile */
 @media (max-width: 450px) {
+
+  #disclaimer h2 {
+    color: #ffffff00;
+}
+#disclaimer h2 b {
+  color: #ffffff00;
+}
+
   /* Event form */
   #event-subscription {
     flex-direction: column;
