@@ -534,7 +534,7 @@ nav ul li a:hover::after{
 
 
 /* Mobile */
-@media (max-width: 450px) {
+@media (max-width: 600px) {
 
   #disclaimer h2 {
     color: #ffffff00;
